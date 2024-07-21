@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>AutoMate</title>
+    <link rel="icon" type="website icon" href="carlogo.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+        <a href="/" class="navbar-brand">
+            <img src="images/carlogo.jpg" width="30" height="30" alt="AutoMate" loading="lazy" class="d-inline-block align-top">
+          AutoMate
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavBar"
+        aria-controls="myNavBar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="myNavBar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                
+               <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact Us</a>
+               </li>
+               <li class="nav-item">
+                <a href="login.html" class="nav-link">Login</a>
+               </li>
+               <li class="nav-item">
+                    <a href="register.html" class="nav-link">Register</a>
+               </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+   </header>
+
+   <!-- Your page content here -->
+   <div class="container my-5">
+    <div class="row">
+      <div class="col-md-4 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <form action="/register" method="post">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-control"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="mobile">Phone Number</label>
+                <input
+                  type="text"
+                  name="mobile"
+                  id="mobile"
+                  class="form-control"
+                  placeholder="Your Phone Number"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="xyz@email.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  placeholder="Confirm Password"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group form-check">
+                <input
+                  type="checkbox"
+                  name="terms"
+                  id="terms"
+                  class="form-check-input"
+                  required
+                />
+                <label for="terms" class="form-check-label">I agree to the terms and conditions.</label>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-success btn-block">
+                  Register
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="pt-3 text-center">
+          <small class="">
+            Already have an account?
+            <a href="login.html">Login now!</a>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      // Client-side validation
+      document.getElementById('registerForm').addEventListener('submit', function(event) {
+        // Check if user is logged in (you can replace this with your actual authentication check)
+        if (!localStorage.getItem('loggedIn')) {
+          event.preventDefault(); // Prevent form submission
+          alert('Please create an account first.'); // Display a message
+        }
+      });
+    </script>
+  </body>
+</html>
